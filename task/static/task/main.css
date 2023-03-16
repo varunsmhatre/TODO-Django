@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.content-section {
+    background-color: #d0d1d2;
+    padding: 10px 20px;
+    border: 2px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+

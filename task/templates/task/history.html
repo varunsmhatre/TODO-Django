@@ -1,0 +1,32 @@
+{% extends "task/base.html" %}
+{% block content %}
+<br>
+<div class="container"><h3 style="display: inline;">My Tasks History</h3>
+</div>  
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+        <tr class="table-secondary">
+          <th scope="col">#</th>
+          {%  for col_name in tasks.0 %}
+              <th scope="col">{{ col_name }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in tasks %}
+          <tr class="">
+            <th scope="row">{{forloop.counter}}</th>
+              <td>{{ row.title }}</td>
+              <td>{{ row.date_created }}</td>
+              <td>{{ row.start_date }}</td>
+              <td>{{ row.end_date }}</td>
+              <td>{{ row.status }}</td>
+              <td>{{ row.comments }}</td>
+              <td>{{ row.date_cc }}</td>
+              <td>{{ row.breached }}</td>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+{% endblock content %}
